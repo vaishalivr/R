@@ -1,0 +1,30 @@
+```{r}
+#print 10 digits of pi
+my_pi <- 3.14159265358
+pi_ <- as.numeric(strsplit(as.character(my_pi), "")[[1]])
+pi_ <- pi_[!is.na(pi_)]
+pi_ <- as.character(pi_)
+pi_angles <- revalue(pi_, c("0" = "1.5707", "1" = "0.94247", "2" = "0.314159", "3" = "5.96902", "4" = "5.34070", "5" = "4.71238", "6" = "4.08407", "7" = "3.45575", "8" = "2.82743", "9" = "2.19911"))
+pi_colour <- revalue(pi_, c("0" = "#F6DA84", "1" = "#EDA127", "2" = "#E5533F", "3" = "#D20E36", "4" = "#BE387C", "5" = "#C397C4", "6" = "#5255AB", "7"= "#2A8B9D", "8"= "#48BB87", "9"="#7FB854"))
+pi_angles <- as.numeric(pi_angles)
+
+x <- c()
+y <- c()
+x[1] = 0
+y[1] = 0
+for (i in 2:length(pi_angles)) {
+  x[i] = x[i-1] + cos(pi_angles[i])
+  y[i] = y[i-1] + sin(pi_angles[i])
+}
+pi_colour <- pi_colour[2:11]
+pi_colour[11] <- "#000000"
+df <- data.frame(x,y, pi_colour)
+ggplot(data = df, aes(x=x, y=y)) + geom_path(color=pi_colour) +
+  theme(axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.grid = element_blank(),
+        panel.background = element_blank(),
+        panel.border = element_blank(),
+        axis.title = element_blank())
+```
+
