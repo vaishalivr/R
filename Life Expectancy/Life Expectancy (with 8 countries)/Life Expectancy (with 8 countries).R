@@ -1,5 +1,3 @@
-#to copy the source file with it in GitHub
-
 data <- LifeExpectancy
 
 data <-  data %>% 
