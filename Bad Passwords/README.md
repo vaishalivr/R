@@ -1,4 +1,4 @@
-rank,password,category,value,time_unit,offline_crack_sec,rank_alt,strength,font_size
+rank,password,category,value,time_unit,offline_crack_sec,rank_alt,strength,font_size 
 
 1,password,password-related,6.91,years,2.17,1,8,11
 2,123456,simple-alphanumeric,18.52,minutes,1.1100000000000002e-5,2,4,8
