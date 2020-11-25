@@ -12,3 +12,12 @@ Afghanistan,AFG,2006,28420974,1161.12488912197,9.73360444436721,Asia
 
 Landline Data
 
+https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-10/landline.csv
+
+entity,code,year,total_pop,gdp_per_cap,landline_subs,continent
+
+Afghanistan,AFG,1990,12412000,NA,0.295531578855418,Asia
+Afghanistan,AFG,1991,13299000,NA,0.284754322820742,Asia
+Afghanistan,AFG,1992,14486000,NA,0.207420934537166,Asia
+Afghanistan,AFG,1993,15817000,NA,0.192115334917644,Asia
+Afghanistan,AFG,1994,17076000,NA,0.179314313196192,Asia
